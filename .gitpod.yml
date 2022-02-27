@@ -1,0 +1,19 @@
+ports:
+  - port: 3000
+    onOpen: ignore
+  - port: 8888
+    onOpen: open-preview
+tasks:
+  - init: yarn install
+    command: yarn netlify:dev
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    pullRequestsFromForks: true
+    addCheck: false
+    addComment: false
+    addBadge: false
+image:
+  file: .gitpod.Dockerfile

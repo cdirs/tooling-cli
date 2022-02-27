@@ -1,0 +1,30 @@
+name: Deploy NPM Package
+'on':
+  push:
+    branches:
+      - main
+      - staging
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+  pull_request_target:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+jobs:
+  Version:
+    uses: tech3k/actions/.github/workflows/bump-version.yml@main
+    secrets:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      PAT: ${{ secrets.PAT }}
+  Review:
+    needs: Version
+    uses: tech3k/actions/.github/workflows/review-request.yml@main
+    secrets:
+      PAT: ${{ secrets.PAT }}
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
