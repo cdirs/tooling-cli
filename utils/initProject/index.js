@@ -62,7 +62,7 @@ module.exports = async () => {
 			'.gitpod.Dockerfile',
 			`FROM gitpod/workspace-full
 
-RUN npm install t3k --global`
+RUN npm install t3k tk-cz --global`
 		);
 
 		fs.writeFileSync(

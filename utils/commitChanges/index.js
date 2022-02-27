@@ -2,6 +2,9 @@ const run = require('../run');
 
 module.exports = async (addAll = false, autoPush = false) => {
 	if (addAll) {
+		// Always pull first
+		await run('git add -A');
+
 		try {
 			await run('git add -A');
 		} catch (e) {
