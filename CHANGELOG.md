@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/tech3k/t3/compare/v1.2.3...v1.3.0) (2022-02-27)
+
+
+### feat
+
+* **commit:** Added the ability to commit ([06281ae](https://github.com/tech3k/t3/commit/06281aeeea8ec56e3abbf563156a50b9bf86cb3c))
+
 ## [1.2.3](https://github.com/tech3k/t3/compare/v1.2.2...v1.2.3) (2022-02-27)
 
 
