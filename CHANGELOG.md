@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/tech3k/t3/compare/v1.2.0...v1.2.1) (2022-02-27)
+
+
+### fix
+
+* **dedication:** Finished initial workload ([cf8ae89](https://github.com/tech3k/t3/commit/cf8ae893734ab6d5d75a41cf0ee209c6b14c0d1b))
+
 # [1.2.0](https://github.com/tech3k/t3/compare/v1.1.0...v1.2.0) (2022-02-27)
 
 
