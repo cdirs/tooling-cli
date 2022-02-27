@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/tech3k/t3/compare/v1.1.0...v1.2.0) (2022-02-27)
+
+
+### feat
+
+* **workload:** Finished initial workload ([92e08e0](https://github.com/tech3k/t3/commit/92e08e0f47247408ae125b03f13f960ccb197237))
+
 # [1.1.0](https://github.com/tech3k/t3/compare/v1.0.0...v1.1.0) (2022-02-27)
 
 
