@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/tech3k/t3/compare/v1.2.1...v1.2.2) (2022-02-27)
+
+
+### fix
+
+* **issue:** Invalid dockerfile command ([4a7eca3](https://github.com/tech3k/t3/commit/4a7eca3a03a0b46a0660d3e72f509720f47829d9))
+
 ## [1.2.1](https://github.com/tech3k/t3/compare/v1.2.0...v1.2.1) (2022-02-27)
 
 
