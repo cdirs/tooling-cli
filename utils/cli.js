@@ -17,8 +17,8 @@ const flags = {
 };
 
 const commands = {
-	init: {
-		desc: `Initialises this as a Tech3k project and installs some defaults`
+	update: {
+		desc: `Updates this repo to be a Tech3k project and installs some defaults`
 	},
 	commit: {
 		desc: `Commits a change to git`

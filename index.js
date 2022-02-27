@@ -4,7 +4,7 @@ const init = require('./utils/init');
 const cli = require('./utils/cli');
 const log = require('./utils/log');
 
-const initProject = require('./utils/initProject');
+const updateProject = require('./utils/updateProject');
 const commitChanges = require('./utils/commitChanges');
 
 const input = cli.input;
@@ -13,9 +13,10 @@ const { clear, debug } = flags;
 
 (async () => {
 	init({ clear });
-	input.includes(`help`) && cli.showHelp(0);
 
-	input.includes(`init`) && (await initProject());
+	(input.length === 0 || input.includes(`help`)) && cli.showHelp(0);
+
+	input.includes(`update`) && (await updateProject());
 	input.includes(`commit`) &&
 		(await commitChanges(flags.addAll, flags.autoPush));
 

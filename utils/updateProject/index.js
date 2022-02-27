@@ -58,17 +58,22 @@ module.exports = async () => {
 			gitpodYaml = { ...(gitpodYamlDefaults[vars.type] ?? {}) };
 		}
 
-		fs.writeFileSync(
-			'.gitpod.Dockerfile',
-			`FROM gitpod/workspace-full
+		const gitpodDump = { ...gitpodYaml, ...defaultGitPodYaml };
 
-RUN npm install t3k tk-cz --global`
-		);
+		if (!gitpodDump.tasks?.before) {
+			gitpodDump.tasks = {
+				...gitpodDump.tasks,
+				before: 'npm install t3k --global'
+			};
+		}
+		// 		fs.writeFileSync(
+		// 			'.gitpod.Dockerfile',
+		// 			`FROM gitpod/workspace-full
 
-		fs.writeFileSync(
-			'.gitpod.yml',
-			yaml.dump({ ...gitpodYaml, ...defaultGitPodYaml })
-		);
+		// RUN npm install t3k tk-cz --global`
+		// 		);
+
+		fs.writeFileSync('.gitpod.yml', yaml.dump(gitpodDump));
 
 		spinner.succeed(`GitPod Ready`);
 	}
