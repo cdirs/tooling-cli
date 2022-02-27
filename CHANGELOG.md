@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/tech3k/t3/compare/v1.2.2...v1.2.3) (2022-02-27)
+
+
+### fix
+
+* **commit:** added commiting ([42147ad](https://github.com/tech3k/t3/commit/42147adf624f69adaf530920027e3ad84be6312d))
+
 ## [1.2.2](https://github.com/tech3k/t3/compare/v1.2.1...v1.2.2) (2022-02-27)
 
 
