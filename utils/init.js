@@ -6,7 +6,7 @@ module.exports = ({ clear = true }) => {
 	unhandled();
 	welcome({
 		title: `t3k`,
-		tagLine: `by Simon Skinner`,
+		tagLine: `dedicated to Silvester Skinner`,
 		description: pkg.description,
 		version: pkg.version,
 		bgColor: '#ff8c00',
