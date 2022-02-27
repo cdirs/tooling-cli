@@ -2,33 +2,26 @@ const meow = require('meow');
 const meowHelp = require('cli-meow-help');
 
 const flags = {
-	clear: {
-		type: `boolean`,
-		default: true,
-		alias: `c`,
-		desc: `Clear the console`
-	},
-	noClear: {
+	addAll: {
 		type: `boolean`,
 		default: false,
-		desc: `Don't clear the console`
+		alias: `A`,
+		desc: `Adds all changes to git`
 	},
-	debug: {
+	autoPush: {
 		type: `boolean`,
 		default: false,
-		alias: `d`,
-		desc: `Print debug info`
-	},
-	version: {
-		type: `boolean`,
-		alias: `v`,
-		desc: `Print CLI version`
+		alias: `p`,
+		desc: `Automatically pushes after a commit`
 	}
 };
 
 const commands = {
 	init: {
 		desc: `Initialises this as a Tech3k project and installs some defaults`
+	},
+	commit: {
+		desc: `Commits a change to git`
 	},
 	help: { desc: `Print help info` }
 };
