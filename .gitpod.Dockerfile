@@ -1,3 +1,3 @@
 FROM gitpod/workspace-full
 
-RUN npm install -G t3k
+RUN npm install t3k --global
