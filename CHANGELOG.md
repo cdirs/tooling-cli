@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/tech3k/t3/compare/v1.3.0...v1.3.1) (2022-02-27)
+
+
+### fix
+
+* **rename:** Renamed the init command to update ([d29252a](https://github.com/tech3k/t3/commit/d29252aa3f14b3bc6680f1b199f064a5725087bf))
+
 # [1.3.0](https://github.com/tech3k/t3/compare/v1.2.3...v1.3.0) (2022-02-27)
 
 
