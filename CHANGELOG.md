@@ -1,3 +1,15 @@
+# [1.4.0](https://github.com/tech3k/t3/compare/v1.3.1...v1.4.0) (2022-02-28)
+
+
+### feat
+
+* **commit:** added commit message generator ([ffa5d8d](https://github.com/tech3k/t3/commit/ffa5d8d3f555e2b5c55a7518273d5941772c30f0)), closes [#1](https://github.com/tech3k/t3/issues/1)
+
+
+### fix
+
+* **commit:** created a commit message ([30def08](https://github.com/tech3k/t3/commit/30def0836b5c86170c21b89e974f6c666ca04259)), closes [#1](https://github.com/tech3k/t3/issues/1)
+
 ## [1.3.1](https://github.com/tech3k/t3/compare/v1.3.0...v1.3.1) (2022-02-27)
 
 
