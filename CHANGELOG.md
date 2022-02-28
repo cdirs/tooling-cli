@@ -1,3 +1,11 @@
+## [2.2.1](https://github.com/tech3k/t3/compare/v2.2.0...v2.2.1) (2022-02-28)
+
+
+### fix
+
+* **codestyle:** added codestyle update on self update ([efd396d](https://github.com/tech3k/t3/commit/efd396d02092c6e4e24a0f581eec1dc9e38a5704))
+* **spinner:** Moved spinner to codestyle ([c323127](https://github.com/tech3k/t3/commit/c323127cd85afcc66bd5301961bf1b97e001d749))
+
 # [2.2.0](https://github.com/tech3k/t3/compare/v2.1.1...v2.2.0) (2022-02-28)
 
 ### feat
