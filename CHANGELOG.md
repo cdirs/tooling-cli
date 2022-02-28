@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/tech3k/t3/compare/v1.5.0...v1.5.1) (2022-02-28)
+
+
+### fix
+
+* **commands:** Stopped output ([6f026fe](https://github.com/tech3k/t3/commit/6f026fe4f85e32c07c433a085c083b06e41d5fb5))
+
 # [1.5.0](https://github.com/tech3k/t3/compare/v1.4.1...v1.5.0) (2022-02-28)
 
 
