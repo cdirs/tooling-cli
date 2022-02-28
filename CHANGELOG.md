@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/tech3k/t3/compare/v1.5.3...v1.6.0) (2022-02-28)
+
+
+### feat
+
+* **update:** Automatic commit for updates ([2c66ed6](https://github.com/tech3k/t3/commit/2c66ed6b4db6e926b781a164b3d383fd97994760))
+
 ## [1.5.3](https://github.com/tech3k/t3/compare/v1.5.2...v1.5.3) (2022-02-28)
 
 
