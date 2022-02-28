@@ -1,4 +1,5 @@
 const run = require('../run');
+const questions = require('./questions');
 
 module.exports = async (addAll = false, autoPush = false) => {
 	if (addAll) {
@@ -12,11 +13,7 @@ module.exports = async (addAll = false, autoPush = false) => {
 		}
 	}
 
-	try {
-		console.log(await run('npx tk-cz'));
-	} catch (e) {
-		console.error(e);
-	}
+	const commitAnswers = questions(addAll, autoPush);
 
 	if (autoPush) {
 		try {
