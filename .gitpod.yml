@@ -10,3 +10,6 @@ github:
     addCheck: false
     addComment: false
     addBadge: false
+vscode:
+  extensions:
+    - esbenp.prettier-vscode

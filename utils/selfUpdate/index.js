@@ -11,6 +11,6 @@ module.exports = async () => {
   alert({
     type: `success`,
     name: `ALL DONE`,
-    msg: `Latest version of the t3k is installed`
+    msg: `Latest version of the t3k is installed`,
   });
 };

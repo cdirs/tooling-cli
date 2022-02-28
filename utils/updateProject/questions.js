@@ -16,7 +16,7 @@ module.exports = async () => {
         hint: `Remove all traces of previous automations ready for updated ones.`,
         enabled: 'Yes',
         disabled: 'No',
-        initial: true
+        initial: true,
       },
       {
         type: 'select',
@@ -28,26 +28,26 @@ module.exports = async () => {
           {
             message: 'Netlify',
             value: 'netlify',
-            hint: 'For a website that will be deployed to Netlify'
+            hint: 'For a website that will be deployed to Netlify',
           },
           {
             message: 'Microservice',
             value: 'microservice',
-            hint: 'For a Microservice that will be deployed to Google Cloud'
+            hint: 'For a Microservice that will be deployed to Google Cloud',
           },
           {
             message: 'NPM Package',
             value: 'npmPackage',
-            hint: 'For a standard NPM package where no extra build steps are required'
+            hint: 'For a standard NPM package where no extra build steps are required',
           },
           {
             message: 'Expo Application',
             value: 'expo',
-            hint: 'A mobile phone application built using Expo'
-          }
-        ]
-      }
-    ]))
+            hint: 'A mobile phone application built using Expo',
+          },
+        ],
+      },
+    ])),
   };
 
   if (vars.type === 'netlify') {
@@ -59,9 +59,9 @@ module.exports = async () => {
           name: 'baseUrl',
           message: 'Domain name?',
           hint: `Should be just a base domain name, e.g. google.com`,
-          required: true
-        }
-      ]))
+          required: true,
+        },
+      ])),
     };
   }
 
@@ -74,9 +74,9 @@ module.exports = async () => {
           name: 'appleAppId',
           message: 'Apple App ID?',
           hint: `The ID given for the app in the apple app store`,
-          required: true
-        }
-      ]))
+          required: true,
+        },
+      ])),
     };
   }
 
@@ -90,9 +90,9 @@ module.exports = async () => {
           message: 'Service name?',
           hint: `The name that will be used for the deployed microservice`,
           required: false,
-          initial: currentPackageJson?.name ?? undefined
-        }
-      ]))
+          initial: currentPackageJson?.name ?? undefined,
+        },
+      ])),
     };
   }
 
@@ -106,7 +106,7 @@ module.exports = async () => {
         hint: `Ensure that commands for committing etc are installed`,
         enabled: 'Yes',
         disabled: 'No',
-        initial: true
+        initial: true,
       },
       {
         type: 'toggle',
@@ -115,9 +115,9 @@ module.exports = async () => {
         hint: `Ensure that all coding standards are followed while developing`,
         enabled: 'Yes',
         disabled: 'No',
-        initial: true
-      }
-    ]))
+        initial: true,
+      },
+    ])),
   };
 
   return vars;

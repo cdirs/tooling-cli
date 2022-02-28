@@ -10,6 +10,7 @@ const defaultGitPodYaml = require('./defaultGitPodYaml');
 const gitpodYamlDefaults = require('./projects/gitpodYaml');
 const { green: g, yellow: y, dim: d } = require('chalk');
 const commitAndRecoverStash = require('./commitAndRecoverStash');
+const codeStyle = require('../codeStyle');
 
 const spinner = ora({ text: '' });
 
@@ -35,8 +36,8 @@ module.exports = async () => {
 
   const actionYaml = yaml.load(
     await axios(
-      `https://raw.githubusercontent.com/tech3k/actions/main/templates/${vars.type}.yml`
-    ).then(r => r.data)
+      `https://raw.githubusercontent.com/tech3k/actions/main/templates/${vars.type}.yml`,
+    ).then(r => r.data),
   );
 
   // Add in service name
@@ -64,13 +65,13 @@ module.exports = async () => {
       "releaseChannel": "staging"
     }
   }
-}`
+}`,
     );
   }
 
   fs.writeFileSync(
     '.github/workflows/deploy.yml',
-    yaml.dump({ ...actionYaml })
+    yaml.dump({ ...actionYaml }),
   );
 
   spinner.succeed(`Automations Generated`);
@@ -89,11 +90,12 @@ module.exports = async () => {
     if (!gitpodDump.tasks && !gitpodDump.tasks[0]) {
       gitpodDump.tasks = [
         {
-          before: 'npm install t3k --global'
-        }
+          before: 'npm install t3k --global && t3k standards',
+        },
       ];
     } else if (!gitpodDump.tasks[0].before) {
-      gitpodDump.tasks[0]['before'] = 'npm install t3k --global';
+      gitpodDump.tasks[0]['before'] =
+        'npm install t3k --global && t3k standards';
     }
 
     fs.writeFileSync('.gitpod.yml', yaml.dump(gitpodDump, { indent: 2 }));
@@ -104,16 +106,17 @@ module.exports = async () => {
   if (vars.codeStandards === true) {
     spinner.start(`Synching Code Standards`);
     // Code Standards
+    await codeStyle();
     spinner.succeed(`Code Standards Synched`);
   }
 
   await commitAndRecoverStash(
-    `ci(update): updated actions and other files to the latest version`
+    `ci(update): updated actions and other files to the latest version`,
   );
 
   alert({
     type: `success`,
     name: `ALL DONE`,
-    msg: `Project is ready to go`
+    msg: `Project is ready to go`,
   });
 };

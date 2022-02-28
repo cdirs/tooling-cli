@@ -7,6 +7,7 @@ const log = require('./utils/log');
 const updateProject = require('./utils/updateProject');
 const commitChanges = require('./utils/commitChanges');
 const selfUpdate = require('./utils/selfUpdate');
+const codeStyle = require('./utils/codeStyle');
 
 const input = cli.input;
 const flags = cli.flags;
@@ -17,6 +18,7 @@ const { clear, debug } = flags;
 
   (input.length === 0 || input.includes(`help`)) && cli.showHelp(0);
 
+  input.includes(`standards`) && (await codeStyle());
   input.includes(`update`) && (await updateProject());
   input.includes(`commit`) &&
     (await commitChanges(flags.addAll, flags.autoPush));
