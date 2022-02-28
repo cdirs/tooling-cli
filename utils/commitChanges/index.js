@@ -35,11 +35,10 @@ ${longDescription.length > 0 ? longDescription : ''}`
 	}${breaking ? `BREAKING CHANGE: ${breakingDescription}` : ''}
 ${fixes ? `Refs: ${issueReferences}` : ''}`;
 
-	// Ensure correct pull type
-	await run('git config pull.rebase false');
-
 	// Always pull first
 	spinner.start(`Pulling latest changes`);
+	// Ensure correct pull type
+	await run('git config pull.rebase false');
 	await run('git pull');
 	spinner.succeed(`Latest changes pulled`);
 

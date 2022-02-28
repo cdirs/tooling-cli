@@ -5,14 +5,20 @@ const del = require('del');
 const alert = require('cli-alerts');
 const yaml = require('js-yaml');
 const axios = require('axios');
+const run = require('../run');
 const defaultGitPodYaml = require('./defaultGitPodYaml');
 const gitpodYamlDefaults = require('./projects/gitpodYaml');
 const { green: g, yellow: y, dim: d } = require('chalk');
+const commitAndRecoverStash = require('./commitAndRecoverStash');
 
 const spinner = ora({ text: '' });
 
 module.exports = async () => {
 	const vars = await questions();
+
+	spinner.start(`Stashing current changes`);
+	await run('git stash');
+	spinner.succeed(`Current changes stashed`);
 
 	spinner.start(`Generating Automations`);
 
@@ -83,6 +89,10 @@ module.exports = async () => {
 		// Code Standards
 		spinner.succeed(`Code Standards Synched`);
 	}
+
+	await commitAndRecoverStash(
+		`ci(update): updated actions and other files to the latest version`
+	);
 
 	alert({
 		type: `success`,
