@@ -2,6 +2,7 @@ const run = require('../run');
 const questions = require('./questions');
 const ora = require('ora');
 const spinner = ora({ text: '' });
+const alert = require('cli-alerts');
 
 module.exports = async (addAll = false, autoPush = false) => {
 	const {
