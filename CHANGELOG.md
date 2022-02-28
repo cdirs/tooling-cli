@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/tech3k/t3/compare/v2.2.1...v2.2.2) (2022-02-28)
+
+
+### fix
+
+* **exec:** exec resolving process ([c0e5c90](https://github.com/tech3k/t3/commit/c0e5c90671360e2560a455b8d346b247e06b1f0c))
+
 ## [2.2.1](https://github.com/tech3k/t3/compare/v2.2.0...v2.2.1) (2022-02-28)
 
 ### fix
