@@ -128,6 +128,8 @@ module.exports = async (addAll = false, autoPush = false) => {
 				name: 'description',
 				message: `Write a short, imperative tense description (max ${remainingCharacters} chars):`,
 				required: true,
+				format: val =>
+					`${val[0] ? val[0].toLowerCase() : ''}${val.substring(1)}`,
 				validate: val =>
 					val.length <= remainingCharacters
 						? true
