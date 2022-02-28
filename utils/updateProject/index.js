@@ -52,6 +52,22 @@ module.exports = async () => {
     actionYaml.jobs.Expo['with'] = { APPLE_APP_ID: vars.appleAppId };
   }
 
+  if (vars.type === 'expo') {
+    fs.writeFileSync(
+      'eas.json',
+      `{
+  "build": {
+    "main": {
+      "releaseChannel": "main"
+    },
+    "staging": {
+      "releaseChannel": "staging"
+    }
+  }
+}`
+    );
+  }
+
   fs.writeFileSync(
     '.github/workflows/deploy.yml',
     yaml.dump({ ...actionYaml })
