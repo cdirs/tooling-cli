@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/tech3k/t3/compare/v1.4.1...v1.5.0) (2022-02-28)
+
+
+### feat
+
+* **spinners:** Added spinners ([1c43739](https://github.com/tech3k/t3/commit/1c437397e59ea1d47b1a1cfae6e9968609d1ff63))
+
 ## [1.4.1](https://github.com/tech3k/t3/compare/v1.4.0...v1.4.1) (2022-02-28)
 
 
