@@ -1,3 +1,15 @@
+## [2.0.1](https://github.com/tech3k/t3/compare/v2.0.0...v2.0.1) (2022-02-28)
+
+
+### ci
+
+* **update:** updated actions and other files to the latest version ([3c08053](https://github.com/tech3k/t3/commit/3c08053c7a79469c26c878accd28cfa1857e9d24))
+
+
+### fix
+
+* **script:** Changed before script ([272c5ae](https://github.com/tech3k/t3/commit/272c5ae69b6e88ee65f3fe50018a2e2c1d061f99))
+
 # [2.0.0](https://github.com/tech3k/t3/compare/v1.6.3...v2.0.0) (2022-02-28)
 
 ## [1.6.3](https://github.com/tech3k/t3/compare/v1.6.2...v1.6.3) (2022-02-28)
