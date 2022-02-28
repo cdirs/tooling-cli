@@ -66,14 +66,14 @@ module.exports = async () => {
 
     const gitpodDump = { ...gitpodYaml, ...defaultGitPodYaml };
 
-    console.log(gitpodDump.tasks);
-
-    if (!gitpodDump.tasks) {
-      gitpodDump.tasks = {
-        before: 'npm install t3k --global'
-      };
-    } else if (!gitpodDump.tasks?.before) {
-      gitpodDump.tasks['before'] = 'npm install t3k --global';
+    if (!gitpodDump.tasks && !gitpodDump.tasks[0]) {
+      gitpodDump.tasks = [
+        {
+          before: 'npm install t3k --global'
+        }
+      ];
+    } else if (!gitpodDump.tasks[0].before) {
+      gitpodDump.tasks[0]['before'] = 'npm install t3k --global';
     }
 
     fs.writeFileSync('.gitpod.yml', yaml.dump(gitpodDump, { indent: 2 }));
