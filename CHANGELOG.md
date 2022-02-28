@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/tech3k/t3/compare/v2.0.1...v2.1.0) (2022-02-28)
+
+
+### feat
+
+* **expo:** Added Expo deployments ([4a91a01](https://github.com/tech3k/t3/commit/4a91a01ac0e9726e98bb0fa532452aae8fe52288))
+
 ## [2.0.1](https://github.com/tech3k/t3/compare/v2.0.0...v2.0.1) (2022-02-28)
 
 
