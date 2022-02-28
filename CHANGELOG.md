@@ -1,3 +1,10 @@
+## [1.6.3](https://github.com/tech3k/t3/compare/v1.6.2...v1.6.3) (2022-02-28)
+
+
+### ci
+
+* **update:** updated actions and other files to the latest version ([c4b4a38](https://github.com/tech3k/t3/commit/c4b4a38b42ce29d57328324eef6f984187fff565))
+
 ## [1.6.2](https://github.com/tech3k/t3/compare/v1.6.1...v1.6.2) (2022-02-28)
 
 
