@@ -2,7 +2,8 @@ const child_process = require('child_process');
 
 module.exports = async (command, output = false) =>
   new Promise((resolve, reject) => {
-    child_process.exec(command, (err, stdout, stderr) => {
-      resolve(err ? err : stdout);
-    });
+    try {
+      const process = child_process.execSync(command);
+      resolve(process);
+    } catch (e) {}
   });
