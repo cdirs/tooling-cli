@@ -1,12 +1,16 @@
 tasks:
-    - init: yarn install
-      before: npm install t3k --global
+  '0':
+    init: yarn install
+    before: npm install t3k --global
+  before: npm install t3k --global
 github:
-    prebuilds:
-        master: true
-        branches: true
-        pullRequests: true
-        pullRequestsFromForks: true
-        addCheck: false
-        addComment: false
-        addBadge: false
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    pullRequestsFromForks: true
+    addCheck: false
+    addComment: false
+    addBadge: false
+image:
+  file: .gitpod.Dockerfile
