@@ -2,6 +2,9 @@ const run = require('../run');
 const questions = require('./questions');
 
 module.exports = async (addAll = false, autoPush = false) => {
+	// Ensure correct pull type
+	await run('git config pull.rebase false');
+
 	// Always pull first
 	await run('git pull');
 
@@ -34,8 +37,6 @@ ${longDescription.length > 0 ? longDescription : ''}`
 			: ''
 	}${breaking ? `BREAKING CHANGE: ${breakingDescription}` : ''}
 ${fixes ? `Refs: ${issueReferences}` : ''}`;
-
-	console.log(commitMessage);
 
 	if (addAll == true || addAllAnswer === true) {
 		try {
