@@ -1,6 +1,8 @@
 tasks:
-  - init: yarn install
+  '0':
+    init: yarn install
     before: npm install t3k --global
+  before: npm install t3k --global
 github:
   prebuilds:
     master: true
