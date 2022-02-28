@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/tech3k/t3/compare/v1.5.1...v1.5.2) (2022-02-28)
+
+
+### fix
+
+* **exec:** changed the exec system ([2dfb617](https://github.com/tech3k/t3/commit/2dfb617e5a350aaaa1e657cdddb6a8181cf0e92b))
+
 ## [1.5.1](https://github.com/tech3k/t3/compare/v1.5.0...v1.5.1) (2022-02-28)
 
 
