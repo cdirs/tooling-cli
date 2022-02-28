@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/tech3k/t3/compare/v1.4.0...v1.4.1) (2022-02-28)
+
+
+### chore
+
+* **log:** removing console log of commit message ([2d727b2](https://github.com/tech3k/t3/commit/2d727b2b2cdadf1b83fa8e38f7ebcd10c53c4164))
+
 # [1.4.0](https://github.com/tech3k/t3/compare/v1.3.1...v1.4.0) (2022-02-28)
 
 
