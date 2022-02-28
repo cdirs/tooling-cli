@@ -1,13 +1,9 @@
 const run = require('../run');
 const questions = require('./questions');
+const ora = require('ora');
+const spinner = ora({ text: '' });
 
 module.exports = async (addAll = false, autoPush = false) => {
-	// Ensure correct pull type
-	await run('git config pull.rebase false');
-
-	// Always pull first
-	await run('git pull');
-
 	const {
 		addAll: addAllAnswer,
 		autoPush: autoPushAnswer,
@@ -38,25 +34,45 @@ ${longDescription.length > 0 ? longDescription : ''}`
 	}${breaking ? `BREAKING CHANGE: ${breakingDescription}` : ''}
 ${fixes ? `Refs: ${issueReferences}` : ''}`;
 
+	// Ensure correct pull type
+	await run('git config pull.rebase false');
+
+	// Always pull first
+	spinner.start(`Pulling latest changes`);
+	await run('git pull');
+	spinner.succeed(`Latest changes pulled`);
+
 	if (addAll == true || addAllAnswer === true) {
 		try {
+			spinner.start(`Adding all files`);
 			await run('git add -A');
+			spinner.succeed(`All files added`);
 		} catch (e) {
 			console.error(e);
 		}
 	}
 
 	try {
+		spinner.start(`Generating commit message`);
 		await run(`git commit -m '${commitMessage}'`);
+		spinner.succeed(`Commit message generated`);
 	} catch (e) {
 		console.error(e);
 	}
 
 	if (autoPush === true || autoPushAnswer === true) {
 		try {
+			spinner.start(`Pushing changes`);
 			await run('git push');
+			spinner.succeed(`Changes pushed`);
 		} catch (e) {
 			console.error(e);
 		}
 	}
+
+	alert({
+		type: `success`,
+		name: `ALL DONE`,
+		msg: `Commit has been done, everything is safe`
+	});
 };
