@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/tech3k/t3/compare/v1.5.2...v1.5.3) (2022-02-28)
+
+
+### fix
+
+* **description:** Lower case first letter ([89f47d6](https://github.com/tech3k/t3/commit/89f47d63bf5dd3ae232ae3f6e038fd3d32d87874))
+
 ## [1.5.2](https://github.com/tech3k/t3/compare/v1.5.1...v1.5.2) (2022-02-28)
 
 
