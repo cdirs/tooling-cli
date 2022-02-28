@@ -104,10 +104,8 @@ module.exports = async () => {
   }
 
   if (vars.codeStandards === true) {
-    spinner.start(`Synching Code Standards`);
     // Code Standards
     await codeStyle();
-    spinner.succeed(`Code Standards Synched`);
   }
 
   await commitAndRecoverStash(

@@ -1,8 +1,11 @@
 const fs = require('fs');
 const yaml = require('js-yaml');
 const defaultGitPodYaml = require('../updateProject/defaultGitPodYaml');
+const ora = require('ora');
+const spinner = ora({ text: '' });
 
 module.exports = async () => {
+  spinner.start(`Synching Code Standards`);
   fs.writeFileSync(
     '.prettierrc.json',
     `{
@@ -21,4 +24,5 @@ module.exports = async () => {
     const updatedYaml = { ...gitpodYaml, ...defaultGitPodYaml };
     fs.writeFileSync('.gitpod.yml', yaml.dump(updatedYaml, { indent: 2 }));
   }
+  spinner.succeed(`Code Standards Synched`);
 };
