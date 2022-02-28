@@ -1,7 +1,7 @@
 {
 	"name": "t3k",
 	"description": "Tech3k Helper Command Line",
-	"version": "1.6.3",
+	"version": "2.0.0",
 	"license": "UNLICENSED",
 	"bin": {
 		"t3k": "index.js"
