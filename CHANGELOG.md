@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/tech3k/t3/compare/v2.1.1...v2.2.0) (2022-02-28)
+
+
+### feat
+
+* **standards:** Added some code standards which will stay updated ([644af7c](https://github.com/tech3k/t3/commit/644af7c2927b7960fc498cbacc35857779c22810))
+
 ## [2.1.1](https://github.com/tech3k/t3/compare/v2.1.0...v2.1.1) (2022-02-28)
 
 
