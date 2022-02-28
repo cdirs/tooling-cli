@@ -47,6 +47,10 @@ module.exports = async () => {
   if (vars.baseUrl) {
     actionYaml.jobs.Netlify['with'] = { NETLIFY_URL: vars.baseUrl };
   }
+  // Add in Apple App ID
+  if (vars.appleAppId) {
+    actionYaml.jobs.Expo['with'] = { APPLE_APP_ID: vars.appleAppId };
+  }
 
   fs.writeFileSync(
     '.github/workflows/deploy.yml',
