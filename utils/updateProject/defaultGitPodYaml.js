@@ -1,7 +1,4 @@
 module.exports = {
-	image: {
-		file: '.gitpod.Dockerfile'
-	},
 	github: {
 		prebuilds: {
 			master: true,
